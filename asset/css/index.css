@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
+    color: var(--text);
+}
+:root {
+    --text: rgb(255, 255, 255);
+    --background: rgb(51, 51, 51);
+    --primary: #2d4aa0;
+    --secondary: rgb(56, 69, 153);
+    --tertiary: rgb(53, 43, 135);
+    --accent: rgb(155, 236, 4);
+}
+body, .Banner, .Container, .InnerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main, .Banner {
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+main {
+    width: 100%;
+    display: flex;
+}
+.Banner {
+    width: 100%;
+    background: url("../img/flow.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.Banner h1 {
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+.Banner h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(12px);
+    z-index: -1;
+}
+.Container {
+    position: fixed;
+    inset: 0 calc(50vw - 15vw);
+    width: 30vw;
+    background: var(--tertiary);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    z-index: 3;
+}
+.Container h2 {
+    margin: auto auto 0 auto;
+    color: var(--text);
+    font-size: 28px;
+    font-weight: 600;
+}
+.InnerContainer {
+    margin: 0 auto auto auto;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+.Login, .Daftar {
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+    border-top: 2px solid rgb(88, 88, 88);
+    border-bottom: 3px solid rgb(34, 34, 34);
+    border-left: 2px solid rgb(88, 88, 88);
+    border-right: 3px solid rgb(34, 34, 34);
+    cursor: pointer;
+}
+.Login:active, .Daftar:active {
+    border-top: 2px solid rgb(14, 14, 14);
+    border-bottom: 3px solid rgb(106, 106, 106);
+    border-left: 2px solid rgb(14, 14, 14);
+    border-right: 3px solid rgb(106, 106, 106);
+}

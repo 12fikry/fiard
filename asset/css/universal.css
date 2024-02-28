@@ -1,0 +1,681 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    color: var(--text);
+}
+:root {
+    --text: rgb(255, 255, 255);
+    --background: rgb(51, 51, 51);
+    --primary: #2d4aa0;
+    --secondary: rgb(56, 69, 153);
+    --tertiary: rgb(53, 43, 135);
+    --accent: rgb(155, 236, 4);
+}
+body {
+    width: auto;
+    height: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+}
+.body2 {
+    background: url("../img/flow.jpg");
+    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#main-2{
+    margin: 0;
+    width: 100%;
+    max-height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#main-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+strong {
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 74px;
+    height: 100%;
+    color: var(--text);
+    background: var(--primary);
+    cursor: default;
+    z-index: 99;
+}
+nav {
+    position: relative;
+    padding: 40px 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ProfileLogo, .HomeLogo, .AlbumLogo, .logout {
+    margin: 15px auto 0 auto;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border: solid 1px inherit;
+    border-radius: 50%;
+}
+.ProfileLogo {
+    background: url(../img/person.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+.HomeLogo {
+    background: url(../img/home.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+.AlbumLogo {
+    background: url(../img/albums.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+.logout {
+    background: url(../img/logout.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+h1 {
+    margin: auto;
+    font-size: 24px;
+}
+.login-title {
+    margin: auto 10px;
+    text-align: center;
+}
+.nav-btn {
+    font-size: 24px;
+    margin: auto 12px auto auto;
+    width: auto;
+    padding: 5px 10px;
+    background: transparent;
+    color: var(--text);
+    border: 10px 10px solid rgb(214, 214, 214);
+    border-radius: 7px;
+    cursor: pointer;
+}
+.nav-btn:active {
+    border: 10px 10px solid white;
+}
+#sidenav {
+    position: fixed;
+    top: 73px;
+    right: 0;
+    width: auto;
+    height: calc(100% - 73px);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px;
+    align-items: center;
+    gap: 18px;
+    background: var(--primary);
+    transform: translateX(100vw);
+    z-index: 100;
+}
+#sidenav h2 {
+    font-size: 21px;
+    font-weight: 550;
+    cursor: pointer;
+}
+.actbar {
+    margin: 85px auto auto auto;
+    width: 95%;
+    height: 13vh;
+    display: flex;
+}
+.search {
+    display: flex;
+    margin: auto auto auto 15px;
+    width: auto;
+    height: auto;
+    gap: 12px;
+    transition: all 0.5s;
+}
+.search button:hover {
+    background: var(--primary);
+}
+.actopt {
+    margin: auto 15px auto auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    gap: 12px;
+}
+.inputext {
+    padding: 7px 14px;
+    width: 10vw;
+    background: transparent;
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    transition: all 1s;
+}
+.inputext:focus {
+    width: 20vw;
+}
+
+.btn1, .btn2, .btn3,
+.btn4, .btn6 {
+    padding: 9px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: var(--text);
+    border: 10px 10px solid white;
+    cursor: pointer;
+}
+.btn4 a{
+    padding: 9px 14px;
+    color: var(--text);
+}
+:is(.btn1, .btn2, .btn3, .btn4, .btn6):hover {
+    filter: brightness(.90);
+}
+:is(.btn1, .btn2, .btn3, .btn4, .btn6):active {
+    border: 1px 1px solid white;
+}
+
+.btn1 {
+    background: transparent;
+}
+.btn2 {
+    background: #366bfc;
+}
+.btn3 {
+    background: #0446fb;
+}
+.btn4 {
+    background: rgb(0, 190, 102);
+}
+.btn6 {
+    margin: 15px auto;
+    width: 80%;
+    color: black;
+    background: var(--accent);
+}
+.btn-group {
+    padding: 3px;
+    gap: 12px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+#add-dialog, #edit-dialog, #edit-dialog2 {
+    inset: 0;
+    position: fixed;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+    border-radius: 6px;
+    transition: all 1s;
+    z-index: 999;
+    background: var(--background);
+    color: var(--text);
+}
+#add-dialog::-webkit-scrollbar,
+#edit-dialog::-webkit-scrollbar,
+#edit-dialog2::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+}
+#add-dialog::before,
+#edit-dialog::before,
+#edit-dialog2::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -70;
+}
+.dialog-nav {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background: var(--primary);
+    display: flex;
+}
+.dialog-nav h2 {
+    padding: 6px 12px;
+    font-size: 23px;
+    margin: auto auto auto 0;
+}
+.dialog-nav p {
+    padding: 6px 12px;
+    font-size: 24px;
+    background: var(--primary);
+    margin: auto 0 auto auto;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.dialog-nav p:hover {
+    background: rgb(255, 0, 0);
+}
+
+
+.add_btn {
+    position: fixed;
+    bottom: 1.5vw;
+    left: 1.5vw;
+    padding: 5px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 500;
+    transition: 0.3s;
+    background: var(--secondary);
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+}
+.add_btn:hover {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+.header2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74px;
+    color: var(--text);
+    background: transparent;
+    cursor: default;
+    border: 0 0 1px 0 solid #000000;
+    z-index: 99;
+}
+.header2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+.nav-title {
+    font-size: 30px;
+    margin: auto auto auto 12px;
+    font-weight: 600;
+}
+
+
+/* home & upload */
+.flexibleCon {
+    margin: 10px 80px 0 auto;
+    padding: 0;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+#prev {
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+}
+.ImageItem {
+    width: calc(15vw - 1px);
+    height: auto;
+    aspect-ratio: 1/1;
+    border: solid 1px transparent;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+.ImageItem:hover {
+    border: solid 1px white;
+}
+
+
+/* Interaction */
+.interaction-row-con {
+    margin: 0 0 0 74px;
+    width: calc(100vw - 74px);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.DisplayedImgCon {
+    margin: 0;
+    width: calc(65vw - 74px);
+    height: 100vh;
+    background: rgb(26, 26, 26);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.DisplayedImg {
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: none;
+}
+.TDLC_Container {
+    margin: 0;
+    padding: 3px;
+    width: 35vw;
+    height: 100vh;
+    background: rgb(234, 234, 234);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.ImgTitle {
+    color: black;
+    margin: 0 0 0 7px;
+    width: 100%;
+    height: 41px;
+    max-width: 34vw;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.ImgTitle:hover {
+    height: auto;
+}
+.UploadedBy {
+    color: black;
+    margin: 0 0 0 7px;
+    width: 100%;
+    height: 31px;
+    max-width: 34vw;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.ImgDesc {
+    color: #000000;
+    margin: 8px 0 10px 7px;
+    width: 100%;
+    height: 23%;
+    max-width: 34vw;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: justify left;
+    overflow-y: auto;
+    cursor: pointer;
+}
+.DisplayComment {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 56%;
+    font-size: 17px;
+    font-weight: 600;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.PostedComment {
+    margin: 0 auto 0 auto;
+    width: 96%;
+    height: auto;
+    border-bottom: 1px solid rgb(154, 154, 154);
+}
+.PostedComment h2,
+.PostedComment p,
+.DisplayComment strong {
+    color: #000000;
+}
+
+
+/* Album */
+.AlbumList {
+    margin: 0;
+    padding: 0 80px 0 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 2px;
+}
+.Album {
+    width: 100%;
+    max-width: 100%;
+    padding: 4px 10px;
+    display: flex;
+    border-bottom: 1px solid rgb(154, 154, 154);
+    gap: 10px;
+}
+.NamaAlbum, .TanggalDibuat, .EditButton {
+    font-size: 20px;    
+}
+.NamaAlbum {
+    margin: 9px auto 9px 0;
+}
+.TanggalDibuat {
+    margin: 9px 0;
+}
+
+
+/* Profil */
+.ProfileContainer {
+    margin: 0;
+    padding: 0 80px 0 0;
+    width: 100%;
+    min-height: 28vh;
+    border-bottom: 1px solid rgb(27, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+.ProfileInfo {
+    margin: auto auto auto 5%;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+.ProfileData {
+    width: fit-content;
+    display: flex;
+}
+
+
+.EditButton {
+    margin: auto 0;
+    padding: 3px 16px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    background: var(--tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.EditButton:hover {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+.DeleteButton {
+    margin: auto 0;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    background: rgb(255, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.DeleteButton a {
+    margin: 0;
+    padding: 3px 16px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    transition: 0.3s;
+    border: none;
+}
+.DeleteButton:hover {
+    border: 1px solid var(--accent);
+}
+.DeleteButton a:hover {
+    color: var(--accent);
+}
+
+.DataPhotoButton {
+    margin: auto;
+    padding: 9px 16px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    color: var(--text);
+    background: rgb(57, 0, 190);
+    border: 10px 10px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.PhotoAlbumContainer {
+    margin: 0;
+    padding: 0 74px 0 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+}
+
+.Titles {
+    width: 100%;
+    padding: 0 74px 0 0;
+    height: auto;
+    display: flex;
+}
+.Title {
+    margin: 12px 0;
+    text-align: center;
+    font-size: 20px;
+    width: 50%;
+}
+
+.UserPhoto {
+    margin: 10px auto 0 auto;
+    padding: 0;
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 64vh;
+    overflow-y: auto;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.UserPhoto .ImageItem {
+    width: 15vw;
+    height: auto;
+    aspect-ratio: 1/1;
+    border: solid 1px transparent;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+.UserPhoto .ImageItem:hover {
+    border: solid 1px white;
+}
+
+.UserAlbum {
+    padding: 0;
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    max-height: 64vh;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 2px;
+}

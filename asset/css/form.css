@@ -1,0 +1,157 @@
+
+.form-1 {
+    margin: 10px auto auto auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-2 {
+    margin: auto;
+    padding: 14px;
+    gap: 8px;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--tertiary);
+    border: none;
+    border-radius: 14px;
+}
+.form-input-row {
+    margin: 6px auto 6px auto;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+}
+.form-input-row-2 {
+    margin: 6px auto 6px auto;
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.form-input-row .inptxt,
+.form-input-row .inpselect {
+    margin: 5px 0 0 0;
+    padding: 7px;
+    border-radius: 10px;
+    color: black;
+}
+.inpselect option {
+    color: black;
+}
+
+
+.default-card {
+    margin: auto;
+    padding: 18px 24px;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 2/1;
+    border: none;
+    border-radius: 13px;
+}
+.card-title {
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+}
+.card-description {
+    color: black;
+}
+
+.card-1 {
+    background: #0d6ae4;
+}
+.card-2 {
+    background: #ffffff;
+}
+
+
+.thedatatable {
+    margin: 15px auto 15px auto;
+    width: 92%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.thedatatable tr {
+    border: 2px solid var(--text);
+}
+.thedatatable td {
+    border: 1px solid var(--text);
+    padding: 10px;
+}
+
+.Comment-Form {
+    position: fixed;
+    inset: calc(100vh - 73px) 1vw 10px calc(100vw - 34vw);
+    width: 33vw;
+    max-height: 63px;
+    background: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.CommentInp {
+    padding: 7px;
+    width: 83%;
+    border: solid 1px inherit;
+    border-radius: 10px;
+    color: black;
+}
+.SendBtn {
+    margin: auto 0;
+    width: 8%;
+    aspect-ratio: 1/1;
+    border: solid 1px inherit;
+    border-radius: 50%;
+    background: url(../img/paper-plane-outline.png);
+    background-position: 40% 60%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.Like-Form {
+    position: fixed;
+    inset: calc(100vh - 70px) calc(100vh - 70px) 20px 20px;
+    width: 50px;
+    height: 50px;
+    background: whitesmoke;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LikeButton {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    background: url(../img/Like.png);
+    background-position: 40% 60%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: var(--tertiary);
+}
+.DisLikeButton {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border: none;
+    border-radius: 15px;
+    background: url(../img/DisLike.png);
+    background-position: 40% 60%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: var(--tertiary);
+}
